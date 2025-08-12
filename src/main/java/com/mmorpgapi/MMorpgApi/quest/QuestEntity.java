@@ -4,9 +4,15 @@ import com.mmorpgapi.MMorpgApi.item.ItemEntity;
 import com.mmorpgapi.MMorpgApi.monster.MonsterEntity;
 import com.mmorpgapi.MMorpgApi.player.PlayerEntity;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "tb_quests")
 public class QuestEntity {
