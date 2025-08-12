@@ -2,12 +2,18 @@ package com.mmorpgapi.MMorpgApi.monster;
 
 import com.mmorpgapi.MMorpgApi.quest.QuestEntity;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 import static jakarta.persistence.GenerationType.*;
 
 @Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "tb_monsters")
 public class MonsterEntity {
 
