@@ -29,7 +29,7 @@ public class QuestEntity {
 
     @ManyToOne
     @JoinColumn(name = "player_id")
-    private PlayerEntity players;
+    private PlayerEntity player;
 
     @ManyToMany
     @JoinTable(

@@ -33,6 +33,6 @@ public class ItemEntity {
     @JoinColumn(name = "player_id")
     private PlayerEntity player;
 
-    @ManyToMany(mappedBy = "rewards")
+    @ManyToMany(mappedBy = "items")
     private List<QuestEntity> quests;
 }
