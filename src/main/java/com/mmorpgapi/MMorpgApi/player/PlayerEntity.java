@@ -1,9 +1,13 @@
 package com.mmorpgapi.MMorpgApi.player;
 
+import com.mmorpgapi.MMorpgApi.item.ItemEntity;
+import com.mmorpgapi.MMorpgApi.quest.QuestEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Entity
 @Table(name = "tb_players")
@@ -36,6 +40,15 @@ public class PlayerEntity {
 
     @Column(name = "energy")
     private int energy;
+
+    @OneToMany(mappedBy = "player")
+    private List<ItemEntity> items;
+
+    @OneToMany(mappedBy = "player")
+    private List<QuestEntity> quests;
+
+
+
 }
 
 

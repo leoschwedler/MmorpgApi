@@ -1,6 +1,9 @@
 package com.mmorpgapi.MMorpgApi.monster;
 
+import com.mmorpgapi.MMorpgApi.quest.QuestEntity;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 import static jakarta.persistence.GenerationType.*;
 
@@ -23,4 +26,8 @@ public class MonsterEntity {
 
     @Column(name = "attack")
     private int attack;
+
+    // MonsterEntity.java
+    @OneToMany(mappedBy = "monster")
+    private List<QuestEntity> quests;
 }

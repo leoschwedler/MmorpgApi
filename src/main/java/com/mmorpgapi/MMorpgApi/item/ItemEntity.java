@@ -1,6 +1,10 @@
 package com.mmorpgapi.MMorpgApi.item;
 
+import com.mmorpgapi.MMorpgApi.player.PlayerEntity;
+import com.mmorpgapi.MMorpgApi.quest.QuestEntity;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "tb_items")
@@ -24,4 +28,11 @@ public class ItemEntity {
 
     @Column(name = "healing")
     private int healing;
+
+    @ManyToOne()
+    @JoinColumn(name = "player_id")
+    private PlayerEntity player;
+
+    @ManyToMany(mappedBy = "rewards")
+    private List<QuestEntity> quests;
 }
