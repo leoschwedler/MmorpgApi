@@ -33,7 +33,7 @@ public class QuestEntity {
 
     @ManyToMany
     @JoinTable(
-            name = "quest_items",
+            name = "tb_quest_items",
             joinColumns = @JoinColumn(name = "quest_id"),
             inverseJoinColumns = @JoinColumn(name = "item_id")
     )
